@@ -77,9 +77,21 @@ namespace L_MP3_Boolean
             SaveFileDialog dlg = new SaveFileDialog();
             dlg.Filter = "Ficheiros XML|*.xml|Todos os ficheiros|*-*";
 
-            if (dlg.ShowDialog() == true)
+                if (dlg.ShowDialog() == true)
                 //invocacao de metodos do model
                 app.ya.EscritaXML(dlg.FileName);
+        }
+
+        private void btMaior_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+            app.ya.ProcurarMaior(tvYa.ToString());
+            }
+            catch(OperaçaoInvalidaException ex)
+            {
+            MessageBox.Show(ex.Message, "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

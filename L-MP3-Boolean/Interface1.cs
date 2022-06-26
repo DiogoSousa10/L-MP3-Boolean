@@ -14,6 +14,6 @@ namespace L_MP3_Boolean
         event MetodosSemParametros SalaReservada;
         void LeituraXML(string ficheiro);
         void EscritaXML(string ficheiro);
-        void ReservarSala(string id);
+        void ProcurarMaior(string titulo);
     }
 }

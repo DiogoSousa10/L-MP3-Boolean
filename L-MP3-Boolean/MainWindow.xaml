@@ -20,6 +20,7 @@
             </MenuItem>
         </Menu>
         <TreeView x:Name="tvYa" Margin="99,76,114,72"/>
+        <Button x:Name="btMaior" Click="btMaior_Click" Content="ProcurarMaior&#xD;&#xA;" HorizontalAlignment="Left" Margin="45,379,0,0" VerticalAlignment="Top" Height="42" Width="125"/>
 
     </Grid>
 </Window>

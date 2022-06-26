@@ -14,6 +14,7 @@ namespace L_MP3_Boolean
         public event MetodosSemParametros SalaReservada;
         public event MetodosSemParametros leituraTerminada;
 
+        public string Maximo { get; set; }
 
         public Model()
         {
@@ -85,9 +86,27 @@ namespace L_MP3_Boolean
                 leituraTerminada();
         }
 
-        public void ReservarSala(string id)
+        public void ProcurarMaior(string titulo)
         {
 
+            var list = (from pro in Dados
+                        where pro.Titulo == titulo
+                        orderby pro.Autor descending
+                        select pro.Titulo).FirstOrDefault();
+
+            if (list != null)
+            {
+                Maximo = list;
+                leituraTerminada();
+            }
+
+            else
+            {
+                throw new OperaçaoInvalidaException("Erro!");
+            }
+
         }
+
     }
-}
+    }
+
