@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?> 
+	<LojaLivro>
+		<Vendido>
+			<book categoria="cooking">
+				<titulo>Everyday Italian</titulo>
+				<autor>Giada De Laurentiis</autor>
+			</book>
+			<book categoria="children">
+				<titulo>Harry Potter</titulo>
+				<autor>J K. Rowling</autor>
+			</book>
+		</Vendido>
+		<NaoVendido>
+			<book category="web">
+				<titulo>Learning XML</titulo>
+				<autor>Erik T. Ray</autor>
+			</book>
+		</NaoVendido>
+	</LojaLivro>
